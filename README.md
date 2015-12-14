@@ -11,7 +11,8 @@ This is a [graphql-express](https://github.com/graphql/express-graphql) compatib
 Install the package:
 
 ```
-npm i --savs lokka-transport-http
+npm i --save lokka-transport-http
+npm i --save lokka
 ```
 
 This is how to send request to Facebook's [SWAPI GraphQL Demo](http://graphql-swapi.parseapp.com/).
@@ -19,7 +20,7 @@ This is how to send request to Facebook's [SWAPI GraphQL Demo](http://graphql-sw
 ```js
 import HttpTransport from 'lokka-transport-http';
 const transport = new HttpTransport('http://graphql-swapi.parseapp.com/');
-const response = transport.send(`
+transport.send(`
     {
       allFilms {
         films {
@@ -27,8 +28,9 @@ const response = transport.send(`
         }
       }
     }
-`);
-console.log(response);
+`).then(response => {
+    console.log(JSON.stringify(response, null, 2));
+});
 ```
 
 ## Send Custom Headers
@@ -44,7 +46,7 @@ const transport = new HttpTransport('/graphql', {headers});
 
 ## Authentication
 
-This package does not handle authentication information for you. But it'll let you interact with your app's existing authentication machanism.
+This package does not handle authentication information for you. But it'll let you interact with your app's existing authentication mechanism.
 
-* If you aleady have an authorized cookie, it'll be sent with the HTTP request. (supports CORS)
-* You can also set a custom `Authorization` header to implement [basic-auth](https://www.npmjs.com/package/basic-auth-header) or similar authentication schema.
+* If you already have an authorized cookie, it'll be sent with the HTTP request. (supports CORS)
+* You can also set a custom `Authorization` [header]((https://www.npmjs.com/package/basic-auth-header) to implement [basic-auth](https://www.npmjs.com/package/basic-auth) support.
