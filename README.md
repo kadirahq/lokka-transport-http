@@ -8,9 +8,13 @@ This is a [graphql-express](https://github.com/graphql/express-graphql) compatib
 
 ## Basic Usage
 
+Install the package:
+
 ```
 npm i --savs lokka-transport-http
 ```
+
+Use it to send request to Facebook's [SWAPI GraphQL Demo](http://graphql-swapi.parseapp.com/).
 
 ```js
 import HttpTransport from 'lokka-transport-http';
