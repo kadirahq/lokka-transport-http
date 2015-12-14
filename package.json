@@ -4,7 +4,7 @@
   "description": "Isomorphic HTTP Transport for Lokka",
   "repository": {
     "type": "git",
-    "url": "https://github.com/kadirahq/lokka-http-transport.git"
+    "url": "https://github.com/kadirahq/lokka-transport-http.git"
   },
   "license": "MIT",
   "options": {
