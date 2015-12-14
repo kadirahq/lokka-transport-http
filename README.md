@@ -1,41 +1,46 @@
-# npm-base
+# lokka-transport-http
 
-A base package for creating NPM packages with ES2015.
+Isomorphic HTTP Transport Layer for [Lokka](https://github.com/kadirahq/lokka)
 
 ---
 
-Writing in ES2015 is an amazing experience. Setting up babel and the development environment in a kind of a pain.
-
-If you want to write a **NPM module** in ES2015 and publish to NPM with backward compatibility, this is the **easiest** way.
+This is a [graphql-express](https://github.com/graphql/express-graphql) compatible transport layer for [Lokka](https://github.com/graphql/express-graphql).
 
 ## Basic Usage
 
-* Simply clone [this](https://github.com/kadirahq/npm-base) project.
-* Change the `package.json` as you want.
-* `lib/index.js` in your entry point.
-* Then publish to npm via `npm publish`.
+```
+npm i --savs lokka-transport-http
+```
 
-## Linting
+```js
+import HttpTransport from 'lokka-transport-http';
+const transport = new HttpTransport('http://graphql-swapi.parseapp.com/');
+const response = transport.send(`
+    {
+      allFilms {
+        films {
+          title
+        }
+      }
+    }
+`);
+console.log(response);
+```
 
-* ESLINT support is added to the project.
-* It's configured for ES2015 and inherited configurations from [graphql/graphql-js](https://github.com/graphql/graphql-js).
-* Use `npm run lint` to lint your code and `npm run lintfix` to fix common issues.
+## Send Custom Headers
 
-## Testing
+It's possible to send custom headers like this:
 
-* You can write test under `__test__` directory anywhere inside `lib` including sub-directories.
-* Then run `npm test` to test your code. (It'll lint your code as well).
-* You can also run `npm run testonly` to run tests without linting.
+```js
+const headers = {
+    'my-headers': 'some-value'
+};
+const transport = new HttpTransport('/graphql', {headers});
+```
 
-## ES2015 Setup
+## Authentication
 
-* ES2015 support is added with babel6.
-* After you publish your project to NPM, it can be run on older node versions and browsers without the support of Babel.
-* This project uses ES2015 and some of the upcoming features like `async await`.
-* You can change them with adding and removing [presets](http://jamesknelson.com/the-six-things-you-need-to-know-about-babel-6/).
-* All the polyfills you use are taken from the local `babel-runtime` package. So, this package won't add any global polyfills and pollute the global namespace.
+This package does not handle authentication information for you. But it'll let you interact with your app's existing authentication machanism.
 
-## Kudos
-
-* Babel6 and the team behind it.
-* Facebook's [graphql-js](https://github.com/graphql/graphql-js) authors for ESLint configurations and for the directory structure.
+* If you aleady have an authorized cookie, it'll be sent with the HTTP request. (supports CORS)
+* You can also set a custom `Authorization` header to implement [basic-auth](https://www.npmjs.com/package/basic-auth-header) or similar authentication schema.
