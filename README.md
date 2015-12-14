@@ -14,7 +14,7 @@ Install the package:
 npm i --savs lokka-transport-http
 ```
 
-Use it to send request to Facebook's [SWAPI GraphQL Demo](http://graphql-swapi.parseapp.com/).
+This is how to send request to Facebook's [SWAPI GraphQL Demo](http://graphql-swapi.parseapp.com/).
 
 ```js
 import HttpTransport from 'lokka-transport-http';

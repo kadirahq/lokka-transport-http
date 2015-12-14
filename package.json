@@ -1,7 +1,7 @@
 {
   "name": "lokka-transport-http",
   "version": "1.0.0",
-  "description": "HTTP Transport for Lokka",
+  "description": "Isomorphic HTTP Transport for Lokka",
   "repository": {
     "type": "git",
     "url": "https://github.com/kadirahq/lokka-http-transport.git"
@@ -10,6 +10,9 @@
   "options": {
     "mocha": "--require scripts/mocha_runner lib/**/__tests__/**/*.js"
   },
+  "keywords": [
+    "lokka", "transport", "http"
+  ],
   "scripts": {
     "prepublish": ". ./scripts/prepublish.sh",
     "lint": "eslint ./lib",
