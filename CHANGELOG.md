@@ -1,5 +1,8 @@
 # Change Log
 
+## v1.3.0
+* Add react native support. See: [1598111](https://github.com/kadirahq/lokka-transport-http/tree/15981118287d7f72ba019937f3c0fbd0af11d98b)
+
 ## v1.2.0
 
 * Able to require normally via `require('lokka-transport-http').Transport`;
