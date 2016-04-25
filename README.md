@@ -33,15 +33,29 @@ transport.send(`
 });
 ```
 
-## Send Custom Headers
+## Send Custom Options
+
+### Headers
 
 It's possible to send custom headers like this:
 
 ```js
-const headers = {
+const options = {};
+options.headers = {
     'my-headers': 'some-value'
 };
-const transport = new HttpTransport('/graphql', {headers});
+const transport = new HttpTransport('/graphql', options);
+```
+
+### Mode
+
+Allows [any mode](https://developer.mozilla.org/en-US/docs/Web/API/Request/mode) compatible with Isomorphic-fetch, e.g.: 'same-origin', 'cors', 'no-cors', 'navigate'.
+Default is 'cors'.
+
+```js
+const options = {};
+options.mode = 'no-cors';
+const transport = new HttpTransport('/graphql', options);
 ```
 
 ## Authentication
