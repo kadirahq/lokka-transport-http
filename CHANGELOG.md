@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.4.0
+
+* Remove isomorphic-fetch and handle isomorphic stuff overself. This is because isomorphic-fetch doesn't work properly in node 0.10.x
+
 ## v1.3.2
 
 * Some code cleanup and potentially fix: [#3](https://github.com/kadirahq/lokka-transport-http/issues/3)
