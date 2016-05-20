@@ -43,7 +43,8 @@
   },
   "dependencies": {
     "babel-runtime": "6.x.x",
-    "isomorphic-fetch": "2.x.x"
+    "node-fetch": "^1.5.2",
+    "whatwg-fetch": "^1.0.0"
   },
   "peerDependencies": {
     "lokka": "1.x.x"
