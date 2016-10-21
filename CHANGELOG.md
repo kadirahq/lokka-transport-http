@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.5.0
+
+* Add the data object received to the Error object [PR9](https://github.com/kadirahq/lokka-transport-http/pull/9)
+* optional CORS credentials support. [PR11](https://github.com/kadirahq/lokka-transport-http/pull/11)
+
 ## v1.4.1
 
 Fix the way how we load fetch. Now it's work properly on safari as well. See [PR16](https://github.com/kadirahq/lokka-transport-http/pull/16)
