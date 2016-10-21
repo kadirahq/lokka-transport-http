@@ -4,7 +4,7 @@ Isomorphic HTTP Transport Layer for [Lokka](https://github.com/kadirahq/lokka)
 
 ---
 
-This is a [graphql-express](https://github.com/graphql/express-graphql) compatible transport layer for [Lokka](https://github.com/graphql/express-graphql).
+This is a [graphql-express](https://github.com/graphql/express-graphql) compatible transport layer for [Lokka](https://github.com/kadirahq/lokka).
 
 ## Basic Usage
 
