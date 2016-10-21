@@ -1,5 +1,9 @@
 # Change Log
 
+## v1.4.1
+
+Fix the way how we load fetch. Now it's work properly on safari as well. See [PR16](https://github.com/kadirahq/lokka-transport-http/pull/16)
+
 ## v1.4.0
 
 * Remove isomorphic-fetch and handle isomorphic stuff overself. This is because isomorphic-fetch doesn't work properly in node 0.10.x
