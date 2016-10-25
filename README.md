@@ -50,3 +50,7 @@ This package does not handle authentication information for you. But it'll let y
 
 * If you already have an authorized cookie, it'll be sent with the HTTP request. (supports CORS)
 * You can also set a custom `Authorization` [header]((https://www.npmjs.com/package/basic-auth-header) to implement [basic-auth](https://www.npmjs.com/package/basic-auth) support.
+
+## Error Handling
+
+By default it will create and throw a new `Error` object using the first GraphQL error. Error handling can be customized with the `handleErrors` option. Check the deafult error handler in `lib/index.js` for an example.
