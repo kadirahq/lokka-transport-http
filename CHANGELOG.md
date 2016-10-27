@@ -1,5 +1,10 @@
 # Change Log
 
+## v1.6.0
+27 October 2017
+
+* Support custom error handlers [PR17](https://github.com/kadirahq/lokka-transport-http/pull/17)
+
 ## v1.5.0
 
 * Add the data object received to the Error object [PR9](https://github.com/kadirahq/lokka-transport-http/pull/9)
