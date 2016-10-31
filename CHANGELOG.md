@@ -1,5 +1,11 @@
 # Change Log
 
+## v1.6.1
+31 October 2017
+
+Fixes [#18](https://github.com/kadirahq/lokka-transport-http/issues/18).
+That causes due to a typo came with `v1.6.0`.
+
 ## v1.6.0
 27 October 2017
 
