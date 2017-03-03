@@ -49,7 +49,7 @@ const transport = new HttpTransport('/graphql', {headers});
 This package does not handle authentication information for you. But it'll let you interact with your app's existing authentication mechanism.
 
 * If you already have an authorized cookie, it'll be sent with the HTTP request. (supports CORS)
-* You can also set a custom `Authorization` [header]((https://www.npmjs.com/package/basic-auth-header) to implement [basic-auth](https://www.npmjs.com/package/basic-auth) support.
+* You can also set a custom `Authorization` [header](https://www.npmjs.com/package/basic-auth-header) to implement [basic-auth](https://www.npmjs.com/package/basic-auth) support.
 
 ## Error Handling
 
