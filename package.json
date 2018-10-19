@@ -1,5 +1,5 @@
 {
-  "name": "@mourasman/lokka-transport-http",
+  "name": "lokka-transport-http",
   "version": "1.6.1",
   "description": "Isomorphic HTTP Transport for Lokka",
   "repository": {
@@ -16,7 +16,7 @@
     "http"
   ],
   "scripts": {
-    "prepublish": "./scripts/prepublish.sh",
+    "prepublish": ". ./scripts/prepublish.sh",
     "lint": "eslint ./lib",
     "lintfix": "eslint ./lib --fix",
     "testonly": "mocha $npm_package_options_mocha",
